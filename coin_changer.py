@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 
+
 def ways(coins, total, n, cache):
     if total == 0:
         return 1
@@ -11,7 +12,9 @@ def ways(coins, total, n, cache):
     if total < coins[n - 1]:
         cache[total][n] = ways(coins, total, n - 1, cache)
     else:
-        cache[total][n] = ways(coins, total - coins[n - 1], n, cache) + ways(coins, total, n - 1, cache)
+        cache[total][n] = ways(coins, total - coins[n - 1], n, cache) + ways(
+            coins, total, n - 1, cache
+        )
     return cache[total][n]
 
 
@@ -22,5 +25,5 @@ def main():
     print(ways(coins, total, len(coins), cache))
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()

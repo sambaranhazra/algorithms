@@ -7,6 +7,6 @@ def fib(n):
     return a
 
 
-if __name__ == '__main__':
-    number = int(input('Enter the number: '))
+if __name__ == "__main__":
+    number = int(input("Enter the number: "))
     print(fib(number))

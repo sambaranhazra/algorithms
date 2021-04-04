@@ -1,6 +1,6 @@
 def demo():
     max_name = None
-    names = ['Sambaran', 'Debangana', 'Chorki']
+    names = ["Sambaran", "Debangana", "Chorki"]
     counts = [len(n) for n in names]
     max_count = 0
     for name, count in zip(names, counts):
@@ -11,13 +11,13 @@ def demo():
 
 
 def check_walrus():
-    fruits = {'apple': 4, 'lemon': 2}
-    if count := fruits.get('lemon'):
-        print(f'lemon={count}')
+    fruits = {"apple": 4, "lemon": 2}
+    if count := fruits.get("lemon"):
+        print(f"lemon={count}")
     else:
-        print('out of lemons')
+        print("out of lemons")
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     check_walrus()
     print()

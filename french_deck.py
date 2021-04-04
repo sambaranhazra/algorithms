@@ -3,12 +3,12 @@
 import collections
 import math
 
-Card = collections.namedtuple('Card', ['rank', 'suite'])
+Card = collections.namedtuple("Card", ["rank", "suite"])
 
 
 class FrenchDeck:
-    ranks = [str(n) for n in range(1, 11)] + list('JKQA')
-    suits = 'spades diamonds clubs hearts'.split()
+    ranks = [str(n) for n in range(1, 11)] + list("JKQA")
+    suits = "spades diamonds clubs hearts".split()
 
     def __init__(self):
         self._cards = [Card(rank, suit) for suit in self.suits for rank in self.ranks]
@@ -26,7 +26,7 @@ class Vector:
         self.y = y
 
     def __repr__(self):
-        return f'Vector({self.x!r}, {self.y!r})'
+        return f"Vector({self.x!r}, {self.y!r})"
 
     def __abs__(self):
         return math.hypot(self.x, self.y)
@@ -46,7 +46,7 @@ class Vector:
         return Vector(self.x * multiplier, self.y * multiplier)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     v = Vector(2, 3)
     print(v)
     print(10 * v)
