@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-def profit(weights: int, prices: int, size: int, n: int, cache: list):
+def profit(weights: list, prices: list, size: int, n: int, cache: list):
     if size == 0 or n == 0:
         return 0
     if cache[size][n] != 0:
